@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     func addToTextView(text: String) {
-        self.textView?.text = self.textView?.text.stringByAppendingString("\(text)\n\n")
+        self.textView?.text = self.textView?.text.stringByAppendingString("\n\(text)\n")
         println(text)
         if let length = self.textView?.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) {
             if (length > 0 ) {
@@ -49,13 +49,12 @@ extension ViewController {
     @IBAction func displayFromDatabasePressed(sender: UIButton) {
         let authorEntities = AuthorEntity.MR_findAll()
         let bookEntities = BookEntity.MR_findAll()
+        self.addToTextView("\n-----")
         for authorEntity in AuthorEntity.MR_findAll() as! [AuthorEntity] {
             self.addToTextView("Author: \(authorEntity.firstName) \(authorEntity.lastName)")
         }
-//
         for bookEntity in BookEntity.MR_findAll() as! [BookEntity] {
             self.addToTextView("Book: \(bookEntity.title) by \(bookEntity.numberOfPages) \(bookEntity.author?.firstName) \(bookEntity.author?.lastName)")
-//            self.addToTextView("Book: \(bookEntity.title) - \(bookEntity.numberOfPages) by ")
         }
     }
 }
