@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C346E0A3F3FB15416495B60C'
-               BlueprintName = 'UICKeyChainStore'
+               BlueprintIdentifier = 'C7526692CE02EDBC0B368F0F'
+               BlueprintName = 'syncano-ios'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libUICKeyChainStore.a'>
+               BuildableName = 'libsyncano-ios.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

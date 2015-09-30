@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F4DBA427B97BFCBCBF1A54C8'
+               BlueprintIdentifier = 'CDAF9CC37FBF2D6EC83C3143'
                BlueprintName = 'Pods-syncano-coredata-demo'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-syncano-coredata-demo.a'>

@@ -24,7 +24,7 @@ PODS:
   - Mantle (2.0.5):
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
-  - syncano-ios (4.0.2):
+  - syncano-ios (4.0.3):
     - AFNetworking (~> 2.5)
     - Mantle (~> 2.0)
     - UICKeyChainStore (~> 2.0)
@@ -38,7 +38,7 @@ SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
-  syncano-ios: 18fa9249c6260edf7433cf0dc04e0fd1f56d5ae2
+  syncano-ios: 8f3da12f2ad44c724fee20d6369920c37502660b
   UICKeyChainStore: c5719c814e8bd69e74e4a0fc09daf8f4d6257a59
 
 COCOAPODS: 0.39.0.beta.4
