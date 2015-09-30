@@ -16,7 +16,7 @@ class AuthorEntity: NSManagedObject {
     @NSManaged var lastName: String
     @NSManaged var books: NSSet
     
-    class func createOrUpdateWithAuthor(author: Author, inContext context: NSManagedObjectContext) {
+    class func createOrUpdateWithAuthor(author: Author, inContext context: NSManagedObjectContext) -> AuthorEntity? {
         var authorEntity = self.authorWithId(author.objectId, inContext: context)
         if (authorEntity == nil) {
             authorEntity = AuthorEntity.MR_createEntityInContext(context)
@@ -24,6 +24,7 @@ class AuthorEntity: NSManagedObject {
         authorEntity?.firstName = author.firstName
         authorEntity?.lastName = author.lastName
         authorEntity?.authorId = author.objectId
+        return authorEntity
     }
     
     class func authorWithId(authorId: NSNumber, inContext context: NSManagedObjectContext) -> AuthorEntity? {

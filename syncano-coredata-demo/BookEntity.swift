@@ -25,9 +25,11 @@ class BookEntity: NSManagedObject {
         bookEntity?.numberOfPages = book.numberOfPages
         bookEntity?.bookId = book.objectId
         if let authorId = book.author?.objectId {
-            if let authorEntity = AuthorEntity.authorWithId(authorId, inContext: context) {
-                bookEntity?.author = authorEntity
+            var authorEntity = AuthorEntity.authorWithId(authorId, inContext: context)
+            if (authorEntity == nil) {
+                authorEntity = AuthorEntity.createOrUpdateWithAuthor(book.author!, inContext: context)
             }
+            bookEntity?.author = authorEntity
         }
     }
     
