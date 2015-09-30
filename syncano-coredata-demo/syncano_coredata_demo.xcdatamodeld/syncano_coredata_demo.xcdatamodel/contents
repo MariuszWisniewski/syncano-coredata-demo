@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AuthorEntity" representedClassName="syncano_coredata_demo.AuthorEntity" syncable="YES">
+        <attribute name="authorId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookEntity" inverseName="author" inverseEntity="BookEntity" syncable="YES"/>
+    </entity>
+    <entity name="BookEntity" representedClassName="syncano_coredata_demo.BookEntity" syncable="YES">
+        <attribute name="bookId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfPages" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity" inverseName="books" inverseEntity="AuthorEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BookEntity" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="AuthorEntity" positionX="-18" positionY="117" width="128" height="103"/>
+    </elements>
+</model>
